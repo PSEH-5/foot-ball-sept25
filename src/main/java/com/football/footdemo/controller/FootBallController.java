@@ -24,10 +24,10 @@ public class FootBallController {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	@GetMapping("/{leag_id}")
-	public String getTeamStandings(@PathVariable("leag_id") Integer leag_id) {
+	@GetMapping("/{league_id}")
+	public String getTeamStandings(@PathVariable("league_id") Integer league_id) {
 		
-		String uri = "https://apiv2.apifootball.com/?action=get_standings&league_id="+leag_id+"&APIkey=" + apiKey;
+		String uri = "https://apiv2.apifootball.com/?action=get_standings&league_id="+league_id+"&APIkey=" + apiKey;
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		HttpEntity<Object> entity = new HttpEntity<>(headers);

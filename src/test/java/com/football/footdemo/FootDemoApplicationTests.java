@@ -29,10 +29,9 @@ public class FootDemoApplicationTests {
 		RequestBuilder request = get("/standings/148");
 		
         try {
-			this.mockMvc.perform(get("/standings/148"))
+			this.mockMvc.perform(request)
 			.andExpect(status().isOk());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
